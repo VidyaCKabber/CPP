@@ -1,4 +1,4 @@
-1 #include <cmath>
+#include <cmath>
 #include <cstdio>
 #include <vector>
 #include <iostream>
@@ -20,14 +20,12 @@ int main() {
     
     cin >> input_1;
     
-    v.erase(v.begin()+input_1);
+    v.erase(--v.begin()+input_1);
         
     cin >> input_2;
     cin >> input_3;
-    --input_2;
-    --input_3;
-   
-    v.erase(v.begin()+input_2,v.begin()+input_3);
+
+    v.erase(--v.begin()+input_2,--v.begin()+input_3);
     
     cout << v.size() << endl;
     for(int j= 0 ; j<v.size(); j++){
