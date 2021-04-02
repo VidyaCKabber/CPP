@@ -3,9 +3,7 @@ using namespace std;
 
 class Vehical{
     protected:
-    void ex_protected(){
-        cout << "This is protected member function of base class" << endl;
-    }
+    int a=9;
     
     public:
     Vehical(){
@@ -25,7 +23,7 @@ class TwoWheeler : public Vehical{
     }  
     
     void display_protected_member(){
-       Vehical::ex_protected();
+       cout << "protected member accessed by any subclass(derived class) of that class." << a << endl;
     }
     
 };
@@ -35,6 +33,6 @@ class Bike : public TwoWheeler{
 };
 
 int main(){
-    TwoWheeler b;
+    Bike b;
     b.display_protected_member();
 }
